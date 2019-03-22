@@ -21,10 +21,10 @@ class Transfer
       status = "rejected"
     end
 
-    while self.status == "pending"
+    while status == "pending"
       sender.balance -= amount
       receiver.balance += amount
-      self.status = "complete"
+      status = "complete"
     end
   end
 end
