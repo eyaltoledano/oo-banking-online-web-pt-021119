@@ -22,8 +22,8 @@ class Transfer
     end
 
     while self.status == "pending"
-      sender.balance -= amount
-      receiver.balance += amount
+      self.sender.balance -= self.amount
+      self.receiver.balance += self.amount
       self.status = "complete"
     end
   end
