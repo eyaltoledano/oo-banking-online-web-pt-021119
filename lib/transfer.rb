@@ -17,8 +17,8 @@ class Transfer
   def execute_transaction
     binding.pry
     if self.amount > self.sender.balance
-      "Transaction rejected. Please check your account balance."
       self.status = "rejected"
+      "Transaction rejected. Please check your account balance."
     end
 
     while self.status == "pending"
