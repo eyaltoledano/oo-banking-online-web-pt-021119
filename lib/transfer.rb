@@ -16,6 +16,6 @@ class Transfer
 
   def execute_transaction
     binding.pry
-    sender.balance
+    self.sender.balance
   end
 end
