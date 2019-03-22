@@ -16,6 +16,7 @@ class Transfer
 
   def execute_transaction
     binding.pry
+    if amount > sender.balance
 
     while self.status == "pending"
       sender.balance -= amount
